@@ -1,0 +1,29 @@
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px 300px 300px;
+    grid-template-rows: 200px 300px 200px;
+    background-color:lightcyan;
+    grid-gap: 25px;
+    padding: 25px;
+    place-content: normal;
+}
+
+
+.Header{
+    grid-column: 2/ span 4;
+    background-color: royalblue;
+}
+.first {
+    grid-column: 2/ span 2;
+    background-color: rgb(65, 153, 225);
+}
+
+.second{
+    grid-column: 4/ span 2;
+    background-color: rgb(65, 153, 225);
+}
+.Footer{
+    grid-column: 2/ span 4;
+    background-color: royalblue;
+}
