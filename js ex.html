@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            java script exercise
+        </title>
+        <script>
+            function paragrapeChange(a,b){
+              return a+", "+b;  
+            }
+        </script>
+    </head>
+    <body style="background-color: darksalmon;">
+        <h1 style="color: royalblue; font-family: cursive;">
+            this is java script exercise!
+        </h1>
+        <p id="P1" style="color: royalblue; font-family: cursive;">
+            <script>
+                document.getElementById("P1").innerHTML="this is a text that has been insert with script but no function"
+            </script>
+        </p>
+        <button  style="background-color: cadetblue;" type="button" onclick="buttonChange()" > click me to change
+            <script>
+                function buttonChange(){
+                    document.getElementById("P1").innerHTML="now the button change me with one!"  
+                }
+            </script>
+        </button>
+        <p id="p2" style="color: royalblue; font-family: cursive; font-size: large;">
+            <script>
+                document.getElementById("p2").innerHTML=paragrapeChange('here is a cute dog', 'say hi to him!')
+            </script>
+            <br>
+            <img id="dogPic" src="C:\Users\liron\Documents\repose\Hello-world-LironDery\dog.jpg" alt="cute dog">
+            <br>
+            <button type="button" onclick="document.getElementById('dogPic').src='dog hi.jpg'" style="background-color: cadetblue;"> 
+                say hi!
+            </button>
+        </p>
+    </body>
+</html>
