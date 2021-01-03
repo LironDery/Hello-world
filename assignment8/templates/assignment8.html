@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>assignment8</title>
+</head>
+<body>
+{% extends 'CV_Liron_Dery.html' %}
+{% block assignment8 %}
+    <h2>{{ head | upper }}</h2>
+    {% if user %}
+        {% include('musicList.html') %}
+    {% else  %}
+        this information is classified
+    {% endif %}
+{% endblock %}
+</body>
+</html>
