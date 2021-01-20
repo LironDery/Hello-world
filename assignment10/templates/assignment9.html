@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>assignment9</title>
+</head>
+<body>
+
+    <h1>Search Form</h1>
+    <form method="GET" action="/assignment9">
+        <input name="name" placeholder="enter your name">
+        <input type="submit">
+    </form>
+    {% if submited == "True" %}
+       the user is: {{name}} and the email is: {{email}}
+    {% endif %}
+
+    {% if session.get('logged_in') %}
+        Hello, {{ username }}, how are you?
+        <br>
+        if you would like to log out please press this button
+        <br>
+        <button onclick="{{ session }}= false"></button>
+
+    {% else %}
+
+        <h1>Registration Form</h1>
+        <form action="/assignment9" method="POST">
+            <input type="username" placeholder="enter your name" id="username" required><br><br>
+            <input type="E-mail" placeholder="enter your E-mail" id="E-mail" required><br><br>
+            <button type="submit">submit</button>
+        </form>
+
+    {% endif %}
+
+</body>
+</html>

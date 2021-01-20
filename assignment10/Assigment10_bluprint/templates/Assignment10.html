@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment10</title>
+    <script>
+        function submitForm(message) {
+            return confirm(message);
+            }
+    </script>
+</head>
+<body>
+    <h1> Add a New User</h1>
+    <form action="/insertUser" method="POST" onsubmit="return submitForm('you added a user successfully');">
+        <label for="id"> Please enter your ID Number</label>
+        <br>
+        <input name="id" id="id">
+        <br>
+        <label for="name"> Please enter your Full Name</label>
+        <br>
+        <input name="name" id="name">
+        <br>
+        <label for="email"> Please enter your Email Address</label>
+        <br>
+        <input name="email" id="email">
+        <br>
+        <input type="submit">
+    </form> <br>
+
+    <h1> Update certain User</h1>
+    <form action="/updateUser" method="POST" onsubmit="return submitForm('you updated the user successfully');">
+        <label for="id"> Please enter your ID Number</label>
+        <br>
+        <input name="id" id="id">
+        <br>
+        <label for="name"> Please enter your Full Name</label>
+        <br>
+        <input name="name" id="name">
+        <br>
+        <label for="email"> Please enter your Email Address</label>
+        <br>
+        <input name="email" id="email">
+        <br>
+        <input type="submit">
+    </form> <br>
+
+    <h1> Delete a User</h1>
+    <form action="/deleteUser" method="GET" onsubmit="return submitForm('you deleted the user successfully');">
+        <label for="id"> Please enter the ID of the user you want to delete</label>
+        <br>
+        <input name="id" type="text" id="id">
+        <br>
+        <input type="submit">
+    </form> <br>
+
+
+    <h1> Users List:</h1>
+    <ul>
+    {% if users %}
+        {% for user in users %}
+            <li>
+            id: {{ user.ID}}, full name: {{ user.Name }} and email: {{ user.Email }} <br>
+            </li>
+        {% endfor %}
+    {% endif %}
+    </ul>
+</body>
+</html>
